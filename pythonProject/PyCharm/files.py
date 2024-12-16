@@ -22,25 +22,11 @@ text_data = "Python writing test."
 dir_path = "C:\\Programming\\Python\\pythonProject\\PyCharm"
 file_path = "test.txt"
 
-success = {
-    "Haidar": 100000,
-    "Noor": -30000,
-    "Hamdi": -999999,
-    "Mahmoud": 930999,
-    "Kareem": 910099,
-    "Ammar": 902999
-}
-failure = {
-    "Haidar": "  _____________"
-              "- |     |     |"
-              "  |_____|_____|",
-    "Hamdi":   "_____________"
-             "+ |     |     |"
-               "|_____|_____|",
-    "Noor": 9999999,
-    "Mahmoud": -900000,
-    "Kareem": -900000,
-    "Ammar": -900000
+objects = {
+    "coffee": "cup",
+    "water bottles": 3,
+    "TV": "BBC News",
+    "Table": "Coffee tray"
 }
 
 if os.path.exists(dir_path):
@@ -53,14 +39,13 @@ if os.path.exists(dir_path):
             file.write("Override complete.")
             print(f"Text file {file_path} has been modified.")
 
-file_path = "degree_of_success.json"
+file_path = "objects.json"
 
 try:
     with open(file_path, "x") as file:
-        json.dump(success, file, indent="\n")
+        json.dump(objects, file, indent="\n")
         print(f"Json file {file_path} has been created.")
 except FileExistsError:
-    file_path = "degree_of_failure.json"
     with open(file_path, "w") as file:
-        json.dump(failure, file, indent="\n")
+        json.dump(objects, file, indent="\n")
         print(f"Json file {file_path} has been modified.")
