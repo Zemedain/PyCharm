@@ -55,8 +55,8 @@ qa.clear()
 nl()
 
 for _ in range(5):
-    num1 = random.randint(-1000, 1000)
-    num2 = random.randint(-1000, 1000)
+    num1 = random.randint(-100, 100)
+    num2 = random.randint(-100, 100)
     op_symbol, op_func = random.choice(list(operations.items()))
     result = op_func(num1, num2)
     qa[f"{num1} {op_symbol} {num2} = "] = result

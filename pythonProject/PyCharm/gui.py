@@ -1,4 +1,3 @@
-from arithmetic import *
 import tkinter as tk
 
 app = tk.Tk()
@@ -6,10 +5,10 @@ app = tk.Tk()
 app.geometry("850x500")
 app.title("My calculator")
 
-text = tk.Label(app, text = "Calculator", font = ("Arial", 18))
+text = tk.Label(app, text="Calculator", font=("Arial", 18))
 text.pack(padx=20, pady=30)
 
-textbox = tk.Text(app, height = 3, font =("Arial", 15))
+textbox = tk.Text(app, height=4, font=("Arial", 15))
 textbox.pack(padx=200, pady=20)
 butframe = tk.Frame(app)
 butframe.columnconfigure(0, weight=1)
@@ -43,14 +42,14 @@ btn8.grid(row=2, column=1, sticky=tk.W+tk.E)
 btn9 = tk.Button(butframe, text="9", font = ("Arial", 16))
 btn9.grid(row=2, column=2, sticky=tk.W+tk.E)
 
-btn10 = tk.Button(butframe, text="0", font = ("Arial", 16))
-btn10.grid(row=2, column=2, sticky=tk.W+tk.E)
+btn10 = tk.Button(butframe, text="(", font = ("Arial", 16))
+btn10.grid(row=3, column=0, sticky=tk.W+tk.E)
 
-btn11 = tk.Button(butframe, text="(", font = ("Arial", 16))
-btn11.grid(row=2, column=2, sticky=tk.W+tk.E)
+btn11 = tk.Button(butframe, text="0", font = ("Arial", 16))
+btn11.grid(row=3, column=1, sticky=tk.W+tk.E)
 
 btn12 = tk.Button(butframe, text=")", font = ("Arial", 16))
-btn12.grid(row=2, column=2, sticky=tk.W+tk.E)
+btn12.grid(row=3, column=2, sticky=tk.W+tk.E)
 
 butframe.pack(fill="x")
 
